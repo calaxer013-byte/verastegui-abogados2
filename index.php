@@ -46,6 +46,7 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+flex-wrap:wrap;
 }
 
 nav h2{
@@ -56,6 +57,7 @@ nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
+font-size:15px;
 }
 
 /* HERO */
@@ -65,6 +67,7 @@ height:90vh;
 background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
 background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -81,6 +84,8 @@ margin-bottom:10px;
 .hero p{
 font-size:20px;
 }
+
+/* SECCIONES */
 
 section{
 padding:80px 10%;
@@ -105,6 +110,11 @@ background:white;
 padding:25px;
 border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card i{
@@ -138,10 +148,11 @@ gap:40px;
 
 form input,form textarea{
 width:100%;
-padding:10px;
-margin-bottom:10px;
+padding:12px;
+margin-bottom:12px;
 border:1px solid #ccc;
-border-radius:5px;
+border-radius:6px;
+font-size:14px;
 }
 
 button{
@@ -151,6 +162,12 @@ border:none;
 padding:12px;
 width:100%;
 cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+button:hover{
+background:#1b2f47;
 }
 
 /* MAPA */
@@ -187,6 +204,72 @@ justify-content:center;
 align-items:center;
 border-radius:50%;
 font-size:28px;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media(max-width:900px){
+
+.contacto{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+align-items:flex-start;
+}
+
+nav div{
+margin-top:10px;
+}
+
+nav a{
+margin-left:0;
+margin-right:15px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+section{
+padding:70px 6%;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+height:80vh;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.whatsapp{
+width:55px;
+height:55px;
+font-size:24px;
+}
+
 }
 
 </style>
@@ -237,55 +320,38 @@ font-size:28px;
 <div class="servicios">
 
 <div class="card">
-
 <i class="fas fa-scale-balanced"></i>
-
 <h3>Derecho Civil</h3>
-
 <p>
-Asesoría en contratos, propiedad, sucesiones, indemnizaciones,
+Asesoría en contratos, propiedad, sucesiones, indemnizaciones
 y conflictos civiles entre personas o empresas.
 </p>
-
 </div>
 
 <div class="card">
-
 <i class="fas fa-gavel"></i>
-
 <h3>Derecho Penal</h3>
-
 <p>
-Defensa penal especializada en investigaciones fiscales,
-procesos judiciales y representación ante tribunales.
+Defensa penal especializada en investigaciones fiscales
+y procesos judiciales.
 </p>
-
 </div>
 
 <div class="card">
-
 <i class="fas fa-briefcase"></i>
-
 <h3>Derecho Laboral</h3>
-
 <p>
-Defensa de trabajadores y empresas en conflictos laborales,
-despidos injustificados y reclamaciones laborales.
+Defensa de trabajadores y empresas en conflictos laborales
+y despidos injustificados.
 </p>
-
 </div>
 
 <div class="card">
-
 <i class="fas fa-building"></i>
-
 <h3>Asesoría Empresarial</h3>
-
 <p>
-Asesoría legal preventiva para empresas, contratos comerciales
-y cumplimiento normativo.
+Asesoría legal preventiva para empresas y cumplimiento normativo.
 </p>
-
 </div>
 
 </div>
@@ -301,58 +367,28 @@ y cumplimiento normativo.
 <div class="proceso">
 
 <div class="paso">
-
 <h3>1. Consulta Inicial</h3>
-
-<p>
-El cliente expone su caso y se realiza un análisis jurídico
-preliminar para determinar la viabilidad del proceso.
-</p>
-
+<p>El cliente expone su caso y se realiza un análisis jurídico preliminar.</p>
 </div>
 
 <div class="paso">
-
 <h3>2. Evaluación Legal</h3>
-
-<p>
-Se revisan documentos, pruebas y antecedentes del caso
-para determinar la estrategia legal más adecuada.
-</p>
-
+<p>Revisión de documentos, pruebas y antecedentes.</p>
 </div>
 
 <div class="paso">
-
 <h3>3. Estrategia Jurídica</h3>
-
-<p>
-Se establece el plan legal, que puede incluir conciliación,
-negociación o inicio de proceso judicial.
-</p>
-
+<p>Definición del plan legal y estrategia del caso.</p>
 </div>
 
 <div class="paso">
-
 <h3>4. Representación Legal</h3>
-
-<p>
-El estudio jurídico representa al cliente ante autoridades,
-fiscalía o juzgados durante todo el proceso.
-</p>
-
+<p>Defensa ante fiscalía, juzgados o conciliaciones.</p>
 </div>
 
 <div class="paso">
-
 <h3>5. Resolución del Caso</h3>
-
-<p>
-Se busca obtener la mejor resolución posible mediante sentencia,
-acuerdo o conciliación favorable.
-</p>
-
+<p>Búsqueda de la mejor resolución para el cliente.</p>
 </div>
 
 </div>
@@ -381,13 +417,11 @@ acuerdo o conciliación favorable.
 
 <h3>Ubicación de la Oficina</h3>
 
-<iframe
-src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=embed">
-</iframe>
+<iframe src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=embed"></iframe>
 
 </div>
 
-<form action="guardar_contacto.php" method="POST" class="form">
+<form action="guardar_contacto.php" method="POST">
 
 <input type="text" name="nombre" placeholder="Nombre completo" required>
 
@@ -400,7 +434,7 @@ src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=
 <button type="submit">Enviar Mensaje</button>
 
 </form>
-  
+
 </div>
 
 </section>
@@ -417,4 +451,3 @@ src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=
 
 </body>
 </html>
-

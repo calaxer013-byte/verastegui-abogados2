@@ -1,7 +1,12 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
@@ -11,7 +16,9 @@ color:#1a1a1a;
 line-height:1.6;
 }
 
-/* ===== CONTAINER ===== */
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
 
 .container{
 max-width:1100px;
@@ -19,7 +26,9 @@ margin:auto;
 padding:0 20px;
 }
 
-/* ===== HEADER ===== */
+/* ========================= */
+/* HEADER */
+/* ========================= */
 
 .header{
 position:fixed;
@@ -34,6 +43,7 @@ padding:15px 50px;
 z-index:1000;
 box-shadow:0 4px 15px rgba(0,0,0,0.4);
 flex-wrap:wrap;
+transition:0.3s;
 }
 
 .logo h1{
@@ -52,19 +62,39 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
+position:relative;
 transition:0.3s;
+}
+
+/* efecto línea elegante */
+
+.nav a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-5px;
+background:#d4af37;
+transition:0.3s;
+}
+
+.nav a:hover::after{
+width:100%;
 }
 
 .nav a:hover{
 color:#d4af37;
 }
 
-/* ===== HERO ===== */
+/* ========================= */
+/* HERO */
+/* ========================= */
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(10,20,35,0.8), rgba(10,20,35,0.9)),
+linear-gradient(rgba(10,20,35,0.85), rgba(10,20,35,0.95)),
 url("https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1920");
 background-size:cover;
 background-position:center;
@@ -76,51 +106,66 @@ color:white;
 padding:0 20px;
 }
 
+.hero-content{
+max-width:700px;
+animation:fadeUp 1.2s ease;
+}
+
 .hero-content h2{
 font-family:'Playfair Display', serif;
-font-size:36px;
+font-size:38px;
 margin-bottom:15px;
 }
 
 .hero p{
 font-size:18px;
+opacity:0.9;
 }
 
-/* ===== BOTON ===== */
+/* ========================= */
+/* BOTONES */
+/* ========================= */
 
 .btn-primary{
 display:inline-block;
-margin-top:20px;
-padding:12px 30px;
+margin-top:25px;
+padding:12px 32px;
 background:#d4af37;
 color:#0d1b2a;
 text-decoration:none;
 font-weight:600;
-border-radius:5px;
+border-radius:6px;
 transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 .btn-primary:hover{
 background:#f1c40f;
+transform:translateY(-2px);
 }
 
-/* ===== SECTIONS ===== */
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
 
 .section{
 padding:100px 20px;
 }
 
 .bg-light{
-background:#ffffff;
+background:white;
 }
 
 h2{
 font-family:'Playfair Display', serif;
 margin-bottom:20px;
 text-align:center;
+font-size:28px;
 }
 
-/* ===== CARDS ===== */
+/* ========================= */
+/* CARDS */
+/* ========================= */
 
 .cards{
 display:grid;
@@ -132,18 +177,28 @@ margin-top:30px;
 .card{
 background:#0d1b2a;
 color:white;
-padding:25px;
-border-radius:8px;
-transition:0.3s;
+padding:30px;
+border-radius:10px;
+transition:0.35s;
 text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card i{
+font-size:30px;
+color:#d4af37;
+margin-bottom:10px;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 background:#1b263b;
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
 }
 
-/* ===== CONTACTO ===== */
+/* ========================= */
+/* CONTACTO */
+/* ========================= */
 
 .contacto-grid{
 display:grid;
@@ -156,9 +211,16 @@ gap:40px;
 width:100%;
 padding:12px;
 margin-bottom:15px;
-border-radius:5px;
+border-radius:6px;
 border:1px solid #ccc;
 font-family:'Poppins';
+transition:0.3s;
+}
+
+.form input:focus,
+.form textarea:focus{
+border-color:#d4af37;
+outline:none;
 }
 
 .form textarea{
@@ -171,7 +233,7 @@ background:#0d1b2a;
 color:white;
 padding:12px;
 border:none;
-border-radius:5px;
+border-radius:6px;
 cursor:pointer;
 transition:0.3s;
 }
@@ -180,27 +242,62 @@ transition:0.3s;
 background:#1b263b;
 }
 
-/* ===== WHATSAPP ===== */
+/* ========================= */
+/* WHATSAPP PROFESIONAL */
+/* ========================= */
 
 .whatsapp{
 position:fixed;
 bottom:25px;
 right:25px;
+width:60px;
+height:60px;
 background:#25D366;
 color:white;
-font-size:22px;
-padding:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
 border-radius:50%;
 text-decoration:none;
-box-shadow:0 6px 20px rgba(0,0,0,0.4);
+box-shadow:0 8px 25px rgba(0,0,0,0.35);
+z-index:999;
+transition:0.3s;
+animation:pulse 2s infinite;
 }
 
-/* ===== FOOTER ===== */
+.whatsapp:hover{
+transform:scale(1.1);
+background:#1ebe5d;
+}
+
+/* animación */
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(37,211,102,.7);
+}
+
+70%{
+box-shadow:0 0 0 15px rgba(37,211,102,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+}
+
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
 .footer{
 background:#0d1b2a;
 color:white;
 padding:40px 20px;
+margin-top:40px;
 }
 
 .footer-content{
@@ -210,7 +307,13 @@ flex-wrap:wrap;
 gap:20px;
 }
 
-/* ===== STATS ===== */
+.footer h3{
+font-family:'Playfair Display', serif;
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
 
 .stats{
 background:#0d1b2a;
@@ -226,11 +329,13 @@ text-align:center;
 }
 
 .stats h3{
-font-size:32px;
+font-size:34px;
 color:#d4af37;
 }
 
-/* ===== TEAM ===== */
+/* ========================= */
+/* TEAM */
+/* ========================= */
 
 .team-grid{
 display:grid;
@@ -243,17 +348,20 @@ margin-top:30px;
 background:#0d1b2a;
 color:white;
 padding:25px;
-border-radius:8px;
+border-radius:10px;
 text-align:center;
 transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 .team-card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 background:#1b263b;
 }
 
-/* ===== CTA ===== */
+/* ========================= */
+/* CTA */
+/* ========================= */
 
 .cta{
 background:linear-gradient(45deg,#0d1b2a,#1b263b);
@@ -263,7 +371,25 @@ padding:80px 20px;
 }
 
 /* ========================= */
-/* RESPONSIVE MOVIL */
+/* ANIMACIONES */
+/* ========================= */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
 /* ========================= */
 
 @media (max-width:768px){
@@ -315,8 +441,9 @@ grid-template-columns:1fr;
 .whatsapp{
 bottom:20px;
 right:20px;
-font-size:20px;
-padding:12px;
+width:55px;
+height:55px;
+font-size:24px;
 }
 
 }

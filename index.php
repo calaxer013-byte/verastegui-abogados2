@@ -387,18 +387,20 @@ src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=
 
 </div>
 
-<form>
+<form action="guardar_contacto.php" method="POST" class="form">
 
-<input type="text" placeholder="Nombre completo" required>
+<input type="text" name="nombre" placeholder="Nombre completo" required>
 
-<input type="email" placeholder="Correo electrónico" required>
+<input type="email" name="correo" placeholder="Correo electrónico" required>
 
-<textarea placeholder="Escriba su consulta"></textarea>
+<input type="text" name="telefono" placeholder="Teléfono">
 
-<button>Enviar consulta</button>
+<textarea name="mensaje" placeholder="Escriba su consulta..." required></textarea>
+
+<button type="submit">Enviar Mensaje</button>
 
 </form>
-
+  
 </div>
 
 </section>
@@ -415,3 +417,4 @@ src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=
 
 </body>
 </html>
+

@@ -1,4 +1,3 @@
-```php
 <?php
 // archivo principal del sitio
 ?>
@@ -187,22 +186,6 @@ color:#d4af37;
 margin-bottom:10px;
 }
 
-/* ===== TEAM ===== */
-
-.team-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.team-card{
-background:white;
-padding:30px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
 /* ===== CONTACTO ===== */
 
 .contacto-grid{
@@ -292,16 +275,13 @@ font-size:28px;
 
 <nav class="nav">
 <a href="#inicio">Inicio</a>
-<a href="#nosotros">Firma</a>
 <a href="#servicios">Servicios</a>
-<a href="#equipo">Equipo</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
 </div>
 
 </header>
-
 
 <section id="inicio" class="hero">
 
@@ -316,7 +296,6 @@ font-size:28px;
 </div>
 
 </section>
-
 
 <section class="stats">
 
@@ -343,7 +322,6 @@ font-size:28px;
 </div>
 
 </section>
-
 
 <section id="servicios" class="section bg-light">
 
@@ -383,7 +361,6 @@ font-size:28px;
 
 </section>
 
-
 <section id="contacto" class="section">
 
 <div class="container contacto-grid">
@@ -393,22 +370,17 @@ font-size:28px;
 <h2>Contáctenos</h2>
 
 <p><i class="fas fa-phone"></i> +51 963 694 971</p>
-
 <p><i class="fas fa-envelope"></i> evlabogados.sac@gmail.com</p>
-
 <p><i class="fas fa-location-dot"></i> Jr. Pedro Puelles 507 - Huánuco</p>
 
 </div>
 
-<form action="guardar_contacto.php" method="POST" class="form">
+<form class="form">
 
-<input type="text" name="nombre" placeholder="Nombre completo" required>
-
-<input type="email" name="correo" placeholder="Correo electrónico" required>
-
-<input type="text" name="telefono" placeholder="Teléfono">
-
-<textarea name="mensaje" placeholder="Escriba su consulta..." required></textarea>
+<input type="text" placeholder="Nombre completo" required>
+<input type="email" placeholder="Correo electrónico" required>
+<input type="text" placeholder="Teléfono">
+<textarea placeholder="Escriba su consulta..." required></textarea>
 
 <button type="submit">Enviar Mensaje</button>
 
@@ -418,25 +390,18 @@ font-size:28px;
 
 </section>
 
-
 <a href="https://wa.me/51963694971" class="whatsapp-btn" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
 
-
 <footer class="footer">
 
 <h3>Eduardo Verastegui Lazarte</h3>
-
 <p>Abogados & Asociados</p>
-
 <p>Huánuco - Perú</p>
-
 <p>© 2026 Todos los derechos reservados</p>
 
 </footer>
 
 </body>
-
 </html>
-```

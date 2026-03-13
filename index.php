@@ -16,26 +16,56 @@ if(isset($_GET['success'])){
 <title>Eduardo Verastegui Lazarte | Abogados & Asociados</title>
 
 <meta name="description" content="Estudio jurídico Eduardo Verastegui Lazarte especializado en derecho penal, civil y laboral en Huánuco. Defensa legal profesional.">
-<meta name="keywords" content="abogado Huanuco, abogado penal Huanuco, estudio juridico Huanuco">
-<meta name="author" content="Eduardo Verastegui Lazarte">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f4f6f9;color:#333;}
 
-/* TOP BAR */
+body{
+background:#f4f6f9;
+color:#333;
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.spinner{
+width:50px;
+height:50px;
+border:5px solid #eee;
+border-top:5px solid #d4af37;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+
+/* TOPBAR */
 
 .topbar{
 background:#08121c;
 color:white;
 padding:6px 40px;
-font-size:13px;
 display:flex;
 justify-content:space-between;
+font-size:13px;
 }
 
 /* HEADER */
@@ -56,12 +86,22 @@ justify-content:space-between;
 align-items:center;
 }
 
-nav h2{color:#d4af37;}
+nav h2{
+color:#d4af37;
+}
 
 nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
+}
+
+/* MENU MOVIL */
+
+#menu-btn{
+display:none;
+font-size:22px;
+cursor:pointer;
 }
 
 /* HERO */
@@ -80,10 +120,18 @@ padding:20px;
 }
 
 .hero h1{font-size:45px;margin-bottom:10px;}
-.hero p{font-size:20px;}
 
-section{padding:80px 10%;}
-h2{text-align:center;margin-bottom:40px;color:#0d1b2a;}
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#0d1b2a;
+}
+
+/* SERVICIOS */
 
 .servicios{
 display:grid;
@@ -99,8 +147,17 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.card:hover{transform:translateY(-5px);}
-.card i{font-size:30px;color:#d4af37;margin-bottom:10px;}
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:30px;
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* STATS */
 
 .stats{
 display:grid;
@@ -116,7 +173,12 @@ border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.stat h3{font-size:35px;color:#d4af37;}
+.stat h3{
+font-size:35px;
+color:#d4af37;
+}
+
+/* PROCESO */
 
 .proceso{
 display:grid;
@@ -131,6 +193,8 @@ border-left:5px solid #d4af37;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* TESTIMONIOS */
+
 .testimonios{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -144,6 +208,8 @@ border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 font-style:italic;
 }
+
+/* CONTACTO */
 
 .contacto{
 display:grid;
@@ -169,7 +235,9 @@ border-radius:6px;
 cursor:pointer;
 }
 
-button:hover{background:#1b2f47;}
+button:hover{
+background:#1b2f47;
+}
 
 iframe{
 width:100%;
@@ -186,6 +254,8 @@ text-align:center;
 margin-top:100px;
 }
 
+/* FOOTER */
+
 footer{
 background:#0d1b2a;
 color:white;
@@ -193,6 +263,8 @@ text-align:center;
 padding:20px;
 margin-top:40px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -210,8 +282,34 @@ font-size:28px;
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
+/* MOBILE */
+
 @media(max-width:900px){
-.contacto{grid-template-columns:1fr;}
+
+.contacto{
+grid-template-columns:1fr;
+}
+
+#menu{
+display:none;
+flex-direction:column;
+background:#0d1b2a;
+position:absolute;
+right:20px;
+top:70px;
+padding:20px;
+border-radius:8px;
+}
+
+#menu a{
+margin:10px 0;
+display:block;
+}
+
+#menu-btn{
+display:block;
+}
+
 }
 
 </style>
@@ -219,6 +317,10 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 </head>
 
 <body>
+
+<div id="loader">
+<div class="spinner"></div>
+</div>
 
 <div class="topbar">
 <span><i class="fas fa-phone"></i> +51 963 694 971</span>
@@ -232,9 +334,12 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 <header>
 
 <nav>
+
 <h2>EVL Abogados</h2>
 
-<div>
+<i class="fas fa-bars" id="menu-btn"></i>
+
+<div id="menu">
 <a href="#inicio">Inicio</a>
 <a href="#sobre">Abogado</a>
 <a href="#especialidades">Especialidades</a>
@@ -261,10 +366,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 <h2>Sobre el Abogado</h2>
 
 <p style="text-align:center;max-width:900px;margin:auto;line-height:1.8;">
-El Dr. Eduardo Verastegui Lazarte es abogado con sólida experiencia en litigación
-y asesoría legal. Ha representado a clientes ante fiscalías, juzgados y tribunales
-del Poder Judicial, ofreciendo estrategias jurídicas orientadas a la defensa de
-los derechos e intereses de sus patrocinados.
+El Dr. Eduardo Verastegui Lazarte es abogado con sólida experiencia en litigación y asesoría legal.
 </p>
 
 </section>
@@ -276,103 +378,23 @@ los derechos e intereses de sus patrocinados.
 <div class="stats">
 
 <div class="stat">
-<h3>+300</h3>
+<h3 class="contador" data-target="300">0</h3>
 <p>Casos atendidos</p>
 </div>
 
 <div class="stat">
-<h3>92%</h3>
+<h3 class="contador" data-target="92">0</h3>
 <p>Resultados favorables</p>
 </div>
 
 <div class="stat">
-<h3>15+</h3>
+<h3 class="contador" data-target="15">0</h3>
 <p>Años de experiencia</p>
 </div>
 
 <div class="stat">
-<h3>+200</h3>
+<h3 class="contador" data-target="200">0</h3>
 <p>Clientes asesorados</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="especialidades">
-
-<h2>Áreas de Especialización</h2>
-
-<div class="servicios">
-
-<div class="card">
-<i class="fas fa-gavel"></i>
-<h3>Derecho Penal</h3>
-<p>Defensa penal en investigaciones fiscales y procesos judiciales.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-scale-balanced"></i>
-<h3>Derecho Civil</h3>
-<p>Contratos, sucesiones, propiedad y conflictos patrimoniales.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-briefcase"></i>
-<h3>Derecho Laboral</h3>
-<p>Defensa en despidos arbitrarios y conflictos laborales.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="proceso">
-
-<h2>Nuestro Proceso de Atención</h2>
-
-<div class="proceso">
-
-<div class="paso">
-<h3>Consulta Legal</h3>
-<p>Análisis profesional del caso y evaluación jurídica.</p>
-</div>
-
-<div class="paso">
-<h3>Estrategia Legal</h3>
-<p>Diseño de estrategia jurídica personalizada.</p>
-</div>
-
-<div class="paso">
-<h3>Defensa Jurídica</h3>
-<p>Representación legal ante tribunales.</p>
-</div>
-
-<div class="paso">
-<h3>Resolución del Caso</h3>
-<p>Búsqueda del resultado más favorable para el cliente.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Testimonios de Clientes</h2>
-
-<div class="testimonios">
-
-<div class="testimonio">
-"Excelente defensa jurídica y asesoría profesional durante todo el proceso."
-</div>
-
-<div class="testimonio">
-"Profesionalismo, compromiso y resultados favorables."
-</div>
-
-<div class="testimonio">
-"Gracias a su estrategia legal logramos resolver nuestro caso."
 </div>
 
 </div>
@@ -419,6 +441,73 @@ los derechos e intereses de sus patrocinados.
 <footer>
 <p>© 2026 Eduardo Verastegui Lazarte - Abogados & Asociados</p>
 </footer>
+
+<script>
+
+/* LOADER */
+
+window.addEventListener("load",()=>{
+document.getElementById("loader").style.display="none";
+});
+
+/* MENU MOVIL */
+
+const menuBtn=document.getElementById("menu-btn");
+const menu=document.getElementById("menu");
+
+menuBtn.onclick=()=>{
+menu.style.display=menu.style.display==="flex"?"none":"flex";
+};
+
+/* CONTADORES */
+
+const counters=document.querySelectorAll(".contador");
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute("data-target");
+const current=+counter.innerText;
+
+const increment=target/100;
+
+if(current<target){
+
+counter.innerText=Math.ceil(current+increment);
+setTimeout(update,20);
+
+}else{
+
+counter.innerText=target+"+";
+
+}
+
+};
+
+update();
+
+});
+
+/* ANIMACIONES SCROLL */
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity=1;
+entry.target.style.transform="translateY(0)";
+}
+});
+});
+
+document.querySelectorAll("section,.card,.stat,.paso,.testimonio").forEach(el=>{
+el.style.opacity=0;
+el.style.transform="translateY(40px)";
+el.style.transition="all .8s ease";
+observer.observe(el);
+});
+
+</script>
 
 </body>
 </html>

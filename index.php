@@ -327,7 +327,7 @@ ante fiscalía, juzgados y tribunales.
 </div>
 
 <div class="stat">
-<h3>15+</h3>
+<h3>+15</h3>
 <p>Años de experiencia</p>
 </div>
 

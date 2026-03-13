@@ -190,6 +190,28 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 font-style:italic;
 }
 
+/* PRINCIPIOS */
+
+.principios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.principio{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.principio i{
+font-size:28px;
+color:#d4af37;
+margin-bottom:10px;
+}
+
 /* CONTACTO */
 
 .contacto{
@@ -287,28 +309,34 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
 <h1>Eduardo Verastegui Lazarte</h1>
 <p>Abogados & Asociados</p>
-<p>Defensa jurídica profesional, estratégica y personalizada</p>
+<p>Defensa jurídica estratégica, profesional y personalizada</p>
 
 </div>
 
 </section>
 
-<!-- SOBRE EL ABOGADO -->
-
 <section id="sobre">
 
 <h2>Sobre el Abogado</h2>
 
-<p style="text-align:center; max-width:800px; margin:auto;">
-El Dr. Eduardo Verastegui Lazarte es abogado especializado en derecho penal,
-civil y laboral. Cuenta con amplia experiencia en litigación, defensa jurídica
-y asesoría legal estratégica, representando a clientes en procesos judiciales
-ante fiscalía, juzgados y tribunales.
+<p style="text-align:center; max-width:900px; margin:auto; line-height:1.8;">
+
+El <strong>Dr. Eduardo Verastegui Lazarte</strong> es abogado con sólida formación jurídica 
+y amplia experiencia en el ejercicio profesional del derecho. Su práctica legal se enfoca en 
+la defensa estratégica de los intereses de sus clientes, brindando asesoría jurídica integral 
+en diversas áreas del derecho.
+
+Cuenta con experiencia en <strong>Derecho Penal, Derecho Civil y Derecho Laboral</strong>, 
+participando activamente en procesos judiciales, investigaciones fiscales y procedimientos 
+administrativos ante diversas instancias del sistema de justicia.
+
+Su ejercicio profesional se caracteriza por los principios de 
+<strong>ética, confidencialidad, responsabilidad y compromiso</strong>, 
+garantizando a cada cliente una defensa jurídica responsable y un análisis legal riguroso.
+
 </p>
 
 </section>
-
-<!-- ESTADISTICAS -->
 
 <section>
 
@@ -340,8 +368,6 @@ ante fiscalía, juzgados y tribunales.
 
 </section>
 
-<!-- SERVICIOS -->
-
 <section id="servicios">
 
 <h2>Servicios Jurídicos</h2>
@@ -351,32 +377,58 @@ ante fiscalía, juzgados y tribunales.
 <div class="card">
 <i class="fas fa-scale-balanced"></i>
 <h3>Derecho Civil</h3>
-<p>Contratos, propiedad, sucesiones y conflictos civiles.</p>
+<p>Asesoría en contratos, propiedad, sucesiones y conflictos civiles.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-gavel"></i>
 <h3>Derecho Penal</h3>
-<p>Defensa penal especializada en investigaciones fiscales.</p>
+<p>Defensa especializada en investigaciones fiscales y procesos penales.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-briefcase"></i>
 <h3>Derecho Laboral</h3>
-<p>Defensa en conflictos laborales y despidos injustificados.</p>
+<p>Defensa de trabajadores y empresas en conflictos laborales.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-building"></i>
 <h3>Asesoría Empresarial</h3>
-<p>Asesoría legal preventiva y cumplimiento normativo.</p>
+<p>Asesoría legal preventiva y cumplimiento normativo empresarial.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CASOS DE EXITO -->
+<section>
+
+<h2>Principios del Estudio Jurídico</h2>
+
+<div class="principios">
+
+<div class="principio">
+<i class="fas fa-user-shield"></i>
+<h3>Confidencialidad</h3>
+<p>Protección absoluta de la información y datos de nuestros clientes.</p>
+</div>
+
+<div class="principio">
+<i class="fas fa-scale-balanced"></i>
+<h3>Ética Profesional</h3>
+<p>Actuamos con integridad y respeto por las normas jurídicas.</p>
+</div>
+
+<div class="principio">
+<i class="fas fa-handshake"></i>
+<h3>Compromiso</h3>
+<p>Defensa jurídica responsable orientada a resultados favorables.</p>
+</div>
+
+</div>
+
+</section>
 
 <section id="casos">
 
@@ -385,25 +437,23 @@ ante fiscalía, juzgados y tribunales.
 <div class="casos">
 
 <div class="caso">
-<h3>Defensa Penal</h3>
-<p>Archivo definitivo de investigación fiscal por delito contra el patrimonio.</p>
+<h3>Defensa Penal Estratégica</h3>
+<p>Se logró el archivo definitivo de investigación fiscal tras demostrar la inexistencia de responsabilidad penal.</p>
 </div>
 
 <div class="caso">
 <h3>Proceso Laboral</h3>
-<p>Reposición laboral obtenida judicialmente por despido arbitrario.</p>
+<p>Sentencia favorable que ordenó la reposición del trabajador despedido arbitrariamente.</p>
 </div>
 
 <div class="caso">
-<h3>Proceso Civil</h3>
-<p>Resolución favorable en conflicto contractual empresarial.</p>
+<h3>Conflicto Contractual</h3>
+<p>Resolución favorable en controversia civil derivada de incumplimiento contractual.</p>
 </div>
 
 </div>
 
 </section>
-
-<!-- TESTIMONIOS -->
 
 <section>
 
@@ -412,22 +462,20 @@ ante fiscalía, juzgados y tribunales.
 <div class="testimonios">
 
 <div class="testimonio">
-"Excelente defensa jurídica y asesoría profesional."
+"La asesoría jurídica brindada fue clara, profesional y altamente efectiva."
 </div>
 
 <div class="testimonio">
-"Gracias al estudio jurídico logramos resolver nuestro proceso."
+"Destaco el compromiso y la responsabilidad en la defensa de nuestro caso."
 </div>
 
 <div class="testimonio">
-"Profesionalismo, compromiso y resultados favorables."
+"Excelente atención y análisis jurídico riguroso durante todo el proceso."
 </div>
 
 </div>
 
 </section>
-
-<!-- CONTACTO -->
 
 <section id="contacto">
 

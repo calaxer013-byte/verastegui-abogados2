@@ -1,7 +1,5 @@
 <?php
-// Mostrar mensaje si se envió el formulario
 $mensaje_exito = false;
-
 if(isset($_GET['success'])){
     $mensaje_exito = true;
 }
@@ -17,22 +15,27 @@ if(isset($_GET['success'])){
 
 <title>Eduardo Verastegui Lazarte | Abogados & Asociados</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Estudio jurídico Eduardo Verastegui Lazarte especializado en derecho penal, civil y laboral en Huánuco. Defensa legal profesional.">
+<meta name="keywords" content="abogado Huanuco, abogado penal Huanuco, estudio juridico Huanuco">
+<meta name="author" content="Eduardo Verastegui Lazarte">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f4f6f9;color:#333;}
 
-body{
-background:#f4f6f9;
-color:#333;
+/* TOP BAR */
+
+.topbar{
+background:#08121c;
+color:white;
+padding:6px 40px;
+font-size:13px;
+display:flex;
+justify-content:space-between;
 }
 
 /* HEADER */
@@ -43,7 +46,7 @@ color:white;
 padding:15px 40px;
 position:fixed;
 width:100%;
-top:0;
+top:30px;
 z-index:1000;
 }
 
@@ -51,18 +54,14 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
 }
 
-nav h2{
-color:#d4af37;
-}
+nav h2{color:#d4af37;}
 
 nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
-font-size:15px;
 }
 
 /* HERO */
@@ -72,7 +71,6 @@ height:90vh;
 background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
 background-size:cover;
-background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -81,28 +79,11 @@ color:white;
 padding:20px;
 }
 
-.hero h1{
-font-size:45px;
-margin-bottom:10px;
-}
+.hero h1{font-size:45px;margin-bottom:10px;}
+.hero p{font-size:20px;}
 
-.hero p{
-font-size:20px;
-}
-
-/* SECCIONES */
-
-section{
-padding:80px 10%;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#0d1b2a;
-}
-
-/* SERVICIOS */
+section{padding:80px 10%;}
+h2{text-align:center;margin-bottom:40px;color:#0d1b2a;}
 
 .servicios{
 display:grid;
@@ -118,17 +99,8 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card i{
-font-size:30px;
-color:#d4af37;
-margin-bottom:10px;
-}
-
-/* ESTADISTICAS */
+.card:hover{transform:translateY(-5px);}
+.card i{font-size:30px;color:#d4af37;margin-bottom:10px;}
 
 .stats{
 display:grid;
@@ -144,12 +116,34 @@ border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.stat h3{
-font-size:35px;
-color:#d4af37;
+.stat h3{font-size:35px;color:#d4af37;}
+
+.proceso{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-/* CONTACTO */
+.paso{
+background:white;
+padding:25px;
+border-left:5px solid #d4af37;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.testimonio{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-style:italic;
+}
 
 .contacto{
 display:grid;
@@ -163,7 +157,6 @@ padding:12px;
 margin-bottom:12px;
 border:1px solid #ccc;
 border-radius:6px;
-font-size:14px;
 }
 
 button{
@@ -172,14 +165,11 @@ color:white;
 border:none;
 padding:12px;
 width:100%;
-cursor:pointer;
 border-radius:6px;
-transition:0.3s;
+cursor:pointer;
 }
 
-button:hover{
-background:#1b2f47;
-}
+button:hover{background:#1b2f47;}
 
 iframe{
 width:100%;
@@ -188,17 +178,13 @@ border:0;
 border-radius:10px;
 }
 
-/* MENSAJE EXITO */
-
 .alert{
 background:#28a745;
 color:white;
 padding:15px;
 text-align:center;
-margin-top:80px;
+margin-top:100px;
 }
-
-/* FOOTER */
 
 footer{
 background:#0d1b2a;
@@ -207,8 +193,6 @@ text-align:center;
 padding:20px;
 margin-top:40px;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -236,24 +220,25 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
 <body>
 
-<?php if($mensaje_exito): ?>
-
-<div class="alert">
-Mensaje enviado correctamente. Nos comunicaremos con usted a la brevedad.
+<div class="topbar">
+<span><i class="fas fa-phone"></i> +51 963 694 971</span>
+<span><i class="fas fa-envelope"></i> evlabogados.sac@gmail.com</span>
 </div>
 
+<?php if($mensaje_exito): ?>
+<div class="alert">Mensaje enviado correctamente. Nos comunicaremos con usted.</div>
 <?php endif; ?>
 
 <header>
 
 <nav>
-
 <h2>EVL Abogados</h2>
 
 <div>
 <a href="#inicio">Inicio</a>
 <a href="#sobre">Abogado</a>
-<a href="#servicios">Servicios</a>
+<a href="#especialidades">Especialidades</a>
+<a href="#proceso">Proceso</a>
 <a href="#contacto">Contacto</a>
 </div>
 
@@ -264,11 +249,9 @@ Mensaje enviado correctamente. Nos comunicaremos con usted a la brevedad.
 <section class="hero" id="inicio">
 
 <div>
-
 <h1>Eduardo Verastegui Lazarte</h1>
 <p>Abogados & Asociados</p>
-<p>Defensa jurídica profesional, estratégica y personalizada</p>
-
+<p>Defensa jurídica profesional y estratégica</p>
 </div>
 
 </section>
@@ -277,14 +260,11 @@ Mensaje enviado correctamente. Nos comunicaremos con usted a la brevedad.
 
 <h2>Sobre el Abogado</h2>
 
-<p style="text-align:center; max-width:900px; margin:auto; line-height:1.8;">
-
-El <strong>Dr. Eduardo Verastegui Lazarte</strong> es abogado con sólida formación jurídica y amplia experiencia en litigación, asesoría legal y defensa estratégica en diversas áreas del derecho.
-
-A lo largo de su trayectoria profesional ha representado a clientes ante fiscalías, juzgados y tribunales del Poder Judicial, desarrollando estrategias legales orientadas a la protección de los derechos e intereses de sus patrocinados.
-
-Su ejercicio profesional se caracteriza por los principios de ética, confidencialidad, responsabilidad y compromiso con cada cliente.
-
+<p style="text-align:center;max-width:900px;margin:auto;line-height:1.8;">
+El Dr. Eduardo Verastegui Lazarte es abogado con sólida experiencia en litigación
+y asesoría legal. Ha representado a clientes ante fiscalías, juzgados y tribunales
+del Poder Judicial, ofreciendo estrategias jurídicas orientadas a la defensa de
+los derechos e intereses de sus patrocinados.
 </p>
 
 </section>
@@ -319,34 +299,80 @@ Su ejercicio profesional se caracteriza por los principios de ética, confidenci
 
 </section>
 
-<section id="servicios">
+<section id="especialidades">
 
-<h2>Servicios Jurídicos</h2>
+<h2>Áreas de Especialización</h2>
 
 <div class="servicios">
 
 <div class="card">
-<i class="fas fa-scale-balanced"></i>
-<h3>Derecho Civil</h3>
-<p>Asesoría en contratos, propiedad, sucesiones y conflictos civiles.</p>
+<i class="fas fa-gavel"></i>
+<h3>Derecho Penal</h3>
+<p>Defensa penal en investigaciones fiscales y procesos judiciales.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-gavel"></i>
-<h3>Derecho Penal</h3>
-<p>Defensa penal especializada en investigaciones fiscales.</p>
+<i class="fas fa-scale-balanced"></i>
+<h3>Derecho Civil</h3>
+<p>Contratos, sucesiones, propiedad y conflictos patrimoniales.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-briefcase"></i>
 <h3>Derecho Laboral</h3>
-<p>Defensa de trabajadores y empresas en conflictos laborales.</p>
+<p>Defensa en despidos arbitrarios y conflictos laborales.</p>
 </div>
 
-<div class="card">
-<i class="fas fa-building"></i>
-<h3>Asesoría Empresarial</h3>
-<p>Asesoría legal preventiva y cumplimiento normativo.</p>
+</div>
+
+</section>
+
+<section id="proceso">
+
+<h2>Nuestro Proceso de Atención</h2>
+
+<div class="proceso">
+
+<div class="paso">
+<h3>Consulta Legal</h3>
+<p>Análisis profesional del caso y evaluación jurídica.</p>
+</div>
+
+<div class="paso">
+<h3>Estrategia Legal</h3>
+<p>Diseño de estrategia jurídica personalizada.</p>
+</div>
+
+<div class="paso">
+<h3>Defensa Jurídica</h3>
+<p>Representación legal ante tribunales.</p>
+</div>
+
+<div class="paso">
+<h3>Resolución del Caso</h3>
+<p>Búsqueda del resultado más favorable para el cliente.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Testimonios de Clientes</h2>
+
+<div class="testimonios">
+
+<div class="testimonio">
+"Excelente defensa jurídica y asesoría profesional durante todo el proceso."
+</div>
+
+<div class="testimonio">
+"Profesionalismo, compromiso y resultados favorables."
+</div>
+
+<div class="testimonio">
+"Gracias a su estrategia legal logramos resolver nuestro caso."
 </div>
 
 </div>
@@ -374,11 +400,8 @@ Su ejercicio profesional se caracteriza por los principios de ética, confidenci
 <form action="guardar_contacto.php" method="POST">
 
 <input type="text" name="nombre" placeholder="Nombre completo" required>
-
 <input type="email" name="correo" placeholder="Correo electrónico" required>
-
 <input type="text" name="telefono" placeholder="Teléfono">
-
 <textarea name="mensaje" placeholder="Escriba su consulta..." required></textarea>
 
 <button type="submit">Enviar Mensaje</button>
@@ -389,14 +412,12 @@ Su ejercicio profesional se caracteriza por los principios de ética, confidenci
 
 </section>
 
-<a class="whatsapp" href="https://wa.me/51963694971">
+<a class="whatsapp" href="https://wa.me/51963694971?text=Hola%20deseo%20realizar%20una%20consulta%20legal">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
-
 <p>© 2026 Eduardo Verastegui Lazarte - Abogados & Asociados</p>
-
 </footer>
 
 </body>

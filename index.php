@@ -1,7 +1,6 @@
 <?php
-// pagina principal
+// Página principal del estudio jurídico
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -85,6 +84,22 @@ margin-bottom:10px;
 font-size:20px;
 }
 
+/* ESTADISTICAS */
+
+.estadisticas{
+display:flex;
+justify-content:space-around;
+text-align:center;
+padding:60px 10%;
+background:#0d1b2a;
+color:white;
+}
+
+.estadisticas h3{
+font-size:36px;
+color:#d4af37;
+}
+
 /* SECCIONES */
 
 section{
@@ -136,6 +151,32 @@ background:white;
 padding:20px;
 border-left:5px solid #d4af37;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CASOS */
+
+.casos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.caso{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-top:4px solid #d4af37;
+}
+
+/* TESTIMONIOS */
+
+.testimonio{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-style:italic;
 }
 
 /* CONTACTO */
@@ -208,16 +249,12 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 z-index:1000;
 }
 
-/* ===================== */
 /* RESPONSIVE */
-/* ===================== */
 
 @media(max-width:900px){
-
 .contacto{
 grid-template-columns:1fr;
 }
-
 }
 
 @media(max-width:768px){
@@ -250,28 +287,6 @@ padding:70px 6%;
 
 }
 
-@media(max-width:480px){
-
-.hero{
-height:80vh;
-}
-
-.hero h1{
-font-size:26px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.whatsapp{
-width:55px;
-height:55px;
-font-size:24px;
-}
-
-}
-
 </style>
 
 </head>
@@ -287,7 +302,7 @@ font-size:24px;
 <div>
 <a href="#inicio">Inicio</a>
 <a href="#servicios">Servicios</a>
-<a href="#proceso">Procesos</a>
+<a href="#casos">Casos</a>
 <a href="#contacto">Contacto</a>
 </div>
 
@@ -302,11 +317,30 @@ font-size:24px;
 <div>
 
 <h1>Eduardo Verastegui Lazarte</h1>
-
 <p>Abogados & Asociados</p>
-
 <p>Defensa jurídica profesional y estratégica</p>
 
+</div>
+
+</section>
+
+<!-- ESTADISTICAS -->
+
+<section class="estadisticas">
+
+<div>
+<h3 class="contador">250</h3>
+<p>Casos Atendidos</p>
+</div>
+
+<div>
+<h3 class="contador">95</h3>
+<p>% Casos Exitosos</p>
+</div>
+
+<div>
+<h3 class="contador">15</h3>
+<p>Años de Experiencia</p>
 </div>
 
 </section>
@@ -322,73 +356,72 @@ font-size:24px;
 <div class="card">
 <i class="fas fa-scale-balanced"></i>
 <h3>Derecho Civil</h3>
-<p>
-Asesoría en contratos, propiedad, sucesiones, indemnizaciones
-y conflictos civiles entre personas o empresas.
-</p>
+<p>Contratos, sucesiones, propiedad y conflictos civiles.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-gavel"></i>
 <h3>Derecho Penal</h3>
-<p>
-Defensa penal especializada en investigaciones fiscales
-y procesos judiciales.
-</p>
+<p>Defensa penal especializada en procesos judiciales.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-briefcase"></i>
 <h3>Derecho Laboral</h3>
-<p>
-Defensa de trabajadores y empresas en conflictos laborales
-y despidos injustificados.
-</p>
+<p>Defensa en despidos y conflictos laborales.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-building"></i>
 <h3>Asesoría Empresarial</h3>
-<p>
-Asesoría legal preventiva para empresas y cumplimiento normativo.
-</p>
+<p>Consultoría jurídica preventiva empresarial.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- PROCESO -->
+<!-- CASOS -->
 
-<section id="proceso">
+<section id="casos">
 
-<h2>Proceso de Atención de Casos</h2>
+<h2>Casos de Éxito</h2>
 
-<div class="proceso">
+<div class="casos">
 
-<div class="paso">
-<h3>1. Consulta Inicial</h3>
-<p>El cliente expone su caso y se realiza un análisis jurídico preliminar.</p>
+<div class="caso">
+<h3>Indemnización laboral ganada</h3>
+<p>Se obtuvo pago completo de beneficios sociales para el trabajador.</p>
 </div>
 
-<div class="paso">
-<h3>2. Evaluación Legal</h3>
-<p>Revisión de documentos, pruebas y antecedentes.</p>
+<div class="caso">
+<h3>Archivo de investigación penal</h3>
+<p>Se logró archivo fiscal por falta de pruebas.</p>
 </div>
 
-<div class="paso">
-<h3>3. Estrategia Jurídica</h3>
-<p>Definición del plan legal y estrategia del caso.</p>
+<div class="caso">
+<h3>Conflicto de propiedad resuelto</h3>
+<p>Sentencia favorable en proceso civil inmobiliario.</p>
 </div>
 
-<div class="paso">
-<h3>4. Representación Legal</h3>
-<p>Defensa ante fiscalía, juzgados o conciliaciones.</p>
 </div>
 
-<div class="paso">
-<h3>5. Resolución del Caso</h3>
-<p>Búsqueda de la mejor resolución para el cliente.</p>
+</section>
+
+<!-- TESTIMONIOS -->
+
+<section>
+
+<h2>Testimonios</h2>
+
+<div class="casos">
+
+<div class="testimonio">
+“Excelente defensa legal durante todo el proceso.”
+</div>
+
+<div class="testimonio">
+“Asesoría jurídica clara y profesional.”
 </div>
 
 </div>
@@ -405,17 +438,11 @@ Asesoría legal preventiva para empresas y cumplimiento normativo.
 
 <div>
 
-<h3>Información de Oficina</h3>
-
 <p><i class="fas fa-phone"></i> +51 963 694 971</p>
-
 <p><i class="fas fa-envelope"></i> evlabogados.sac@gmail.com</p>
-
 <p><i class="fas fa-location-dot"></i> Jr. Pedro Puelles 507 - Huánuco</p>
 
 <br>
-
-<h3>Ubicación de la Oficina</h3>
 
 <iframe src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=embed"></iframe>
 
@@ -424,12 +451,9 @@ Asesoría legal preventiva para empresas y cumplimiento normativo.
 <form action="guardar_contacto.php" method="POST">
 
 <input type="text" name="nombre" placeholder="Nombre completo" required>
-
 <input type="email" name="correo" placeholder="Correo electrónico" required>
-
 <input type="text" name="telefono" placeholder="Teléfono">
-
-<textarea name="mensaje" placeholder="Escriba su consulta..." required></textarea>
+<textarea name="mensaje" placeholder="Consulta..." required></textarea>
 
 <button type="submit">Enviar Mensaje</button>
 
@@ -444,10 +468,36 @@ Asesoría legal preventiva para empresas y cumplimiento normativo.
 </a>
 
 <footer>
-
 <p>© 2026 Eduardo Verastegui Lazarte - Abogados & Asociados</p>
-
 </footer>
+
+<script>
+
+/* contador animado */
+
+const counters=document.querySelectorAll(".contador");
+
+counters.forEach(counter=>{
+counter.innerText='0';
+
+const updateCounter=()=>{
+const target=+counter.getAttribute("data-target")||counter.innerText;
+const c=+counter.innerText;
+
+const increment=target/100;
+
+if(c<target){
+counter.innerText=`${Math.ceil(c+increment)}`;
+setTimeout(updateCounter,30);
+}else{
+counter.innerText=target;
+}
+};
+
+updateCounter();
+});
+
+</script>
 
 </body>
 </html>

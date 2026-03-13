@@ -1,5 +1,5 @@
 <?php
-// Página principal del Estudio Jurídico
+// pagina principal
 ?>
 
 <!DOCTYPE html>
@@ -10,11 +10,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estudio Jurídico Eduardo Verastegui Lazarte | Abogados & Asociados</title>
-
-<meta name="description" content="Estudio jurídico especializado en derecho civil, penal, laboral y asesoría empresarial en Huánuco. Defensa legal estratégica y asesoría jurídica profesional.">
-
-<meta name="keywords" content="abogados huanuco, estudio juridico, derecho penal, derecho civil, abogado laboral huanuco">
+<title>Eduardo Verastegui Lazarte | Abogados & Asociados</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -27,7 +23,6 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
@@ -45,29 +40,24 @@ position:fixed;
 width:100%;
 top:0;
 z-index:1000;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+flex-wrap:wrap;
 }
 
 nav h2{
 color:#d4af37;
-font-weight:600;
 }
 
 nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
-transition:.3s;
-}
-
-nav a:hover{
-color:#d4af37;
+font-size:15px;
 }
 
 /* HERO */
@@ -87,101 +77,65 @@ padding:20px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:45px;
 margin-bottom:10px;
 }
 
 .hero p{
 font-size:20px;
-opacity:.9;
 }
 
 /* SECCIONES */
 
 section{
-padding:90px 10%;
+padding:80px 10%;
 }
 
 h2{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:40px;
 color:#0d1b2a;
-font-size:32px;
-}
-
-/* ESTADISTICAS */
-
-.stats{
-background:#0d1b2a;
-color:white;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-text-align:center;
-padding:70px 10%;
-}
-
-.stat h3{
-font-size:40px;
-color:#d4af37;
 }
 
 /* SERVICIOS */
 
 .servicios{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
 .card{
 background:white;
-padding:30px;
+padding:25px;
 border-radius:8px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-transition:.3s;
-text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-5px);
 }
 
 .card i{
-font-size:36px;
+font-size:30px;
 color:#d4af37;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-/* CASOS */
+/* PROCESO */
 
-.casos{
+.proceso{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-.caso{
+.paso{
 background:white;
-padding:25px;
-border-top:5px solid #d4af37;
-border-radius:6px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* TESTIMONIOS */
-
-.testimonios{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.testimonio{
-background:white;
-padding:25px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-font-style:italic;
+padding:20px;
+border-left:5px solid #d4af37;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* CONTACTO */
@@ -198,6 +152,7 @@ padding:12px;
 margin-bottom:12px;
 border:1px solid #ccc;
 border-radius:6px;
+font-size:14px;
 }
 
 button{
@@ -206,9 +161,9 @@ color:white;
 border:none;
 padding:12px;
 width:100%;
-border-radius:6px;
 cursor:pointer;
-transition:.3s;
+border-radius:6px;
+transition:0.3s;
 }
 
 button:hover{
@@ -220,21 +175,8 @@ background:#1b2f47;
 iframe{
 width:100%;
 height:300px;
-border-radius:10px;
 border:0;
-}
-
-/* CTA */
-
-.cta{
-background:#d4af37;
-text-align:center;
-padding:60px;
-color:#0d1b2a;
-}
-
-.cta h2{
-color:#0d1b2a;
+border-radius:10px;
 }
 
 /* FOOTER */
@@ -244,6 +186,7 @@ background:#0d1b2a;
 color:white;
 text-align:center;
 padding:20px;
+margin-top:40px;
 }
 
 /* WHATSAPP */
@@ -262,14 +205,69 @@ align-items:center;
 border-radius:50%;
 font-size:28px;
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
+z-index:1000;
 }
 
+/* ===================== */
 /* RESPONSIVE */
+/* ===================== */
 
 @media(max-width:900px){
 
 .contacto{
 grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+align-items:flex-start;
+}
+
+nav div{
+margin-top:10px;
+}
+
+nav a{
+margin-left:0;
+margin-right:15px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+section{
+padding:70px 6%;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+height:80vh;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.whatsapp{
+width:55px;
+height:55px;
+font-size:24px;
 }
 
 }
@@ -289,7 +287,7 @@ grid-template-columns:1fr;
 <div>
 <a href="#inicio">Inicio</a>
 <a href="#servicios">Servicios</a>
-<a href="#casos">Casos</a>
+<a href="#proceso">Procesos</a>
 <a href="#contacto">Contacto</a>
 </div>
 
@@ -307,29 +305,8 @@ grid-template-columns:1fr;
 
 <p>Abogados & Asociados</p>
 
-<p>Defensa jurídica estratégica y asesoría legal especializada</p>
+<p>Defensa jurídica profesional y estratégica</p>
 
-</div>
-
-</section>
-
-<!-- ESTADISTICAS -->
-
-<section class="stats">
-
-<div class="stat">
-<h3 class="contador" data-target="250">0</h3>
-<p>Casos Atendidos</p>
-</div>
-
-<div class="stat">
-<h3 class="contador" data-target="95">0</h3>
-<p>% Resultados Favorables</p>
-</div>
-
-<div class="stat">
-<h3 class="contador" data-target="15">0</h3>
-<p>Años de Experiencia</p>
 </div>
 
 </section>
@@ -338,79 +315,80 @@ grid-template-columns:1fr;
 
 <section id="servicios">
 
-<h2>Áreas de Práctica Jurídica</h2>
+<h2>Servicios Jurídicos</h2>
 
 <div class="servicios">
 
 <div class="card">
-<i class="fa-solid fa-scale-balanced"></i>
+<i class="fas fa-scale-balanced"></i>
 <h3>Derecho Civil</h3>
-<p>Asesoría legal en contratos, sucesiones, propiedad y conflictos patrimoniales.</p>
+<p>
+Asesoría en contratos, propiedad, sucesiones, indemnizaciones
+y conflictos civiles entre personas o empresas.
+</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-gavel"></i>
+<i class="fas fa-gavel"></i>
 <h3>Derecho Penal</h3>
-<p>Defensa penal estratégica en investigaciones fiscales y procesos judiciales.</p>
+<p>
+Defensa penal especializada en investigaciones fiscales
+y procesos judiciales.
+</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-user-tie"></i>
+<i class="fas fa-briefcase"></i>
 <h3>Derecho Laboral</h3>
-<p>Defensa en conflictos laborales, despidos arbitrarios y beneficios sociales.</p>
+<p>
+Defensa de trabajadores y empresas en conflictos laborales
+y despidos injustificados.
+</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-building"></i>
+<i class="fas fa-building"></i>
 <h3>Asesoría Empresarial</h3>
-<p>Consultoría jurídica preventiva y cumplimiento normativo empresarial.</p>
+<p>
+Asesoría legal preventiva para empresas y cumplimiento normativo.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CASOS -->
+<!-- PROCESO -->
 
-<section id="casos">
+<section id="proceso">
 
-<h2>Casos de Éxito</h2>
+<h2>Proceso de Atención de Casos</h2>
 
-<div class="casos">
+<div class="proceso">
 
-<div class="caso">
-<h3>Indemnización Laboral</h3>
-<p>Obtención de compensación completa por despido arbitrario.</p>
+<div class="paso">
+<h3>1. Consulta Inicial</h3>
+<p>El cliente expone su caso y se realiza un análisis jurídico preliminar.</p>
 </div>
 
-<div class="caso">
-<h3>Archivo de Investigación Penal</h3>
-<p>Se logró el archivo definitivo de investigación fiscal.</p>
+<div class="paso">
+<h3>2. Evaluación Legal</h3>
+<p>Revisión de documentos, pruebas y antecedentes.</p>
 </div>
 
-<div class="caso">
-<h3>Conflicto de Propiedad</h3>
-<p>Sentencia favorable en litigio civil de propiedad inmobiliaria.</p>
+<div class="paso">
+<h3>3. Estrategia Jurídica</h3>
+<p>Definición del plan legal y estrategia del caso.</p>
 </div>
 
+<div class="paso">
+<h3>4. Representación Legal</h3>
+<p>Defensa ante fiscalía, juzgados o conciliaciones.</p>
 </div>
 
-</section>
-
-<!-- TESTIMONIOS -->
-
-<section>
-
-<h2>Testimonios</h2>
-
-<div class="testimonios">
-
-<div class="testimonio">
-“El estudio brindó asesoría jurídica clara y efectiva durante todo el proceso.”
-</div>
-
-<div class="testimonio">
-“Profesionalismo, compromiso y excelente defensa legal.”
+<div class="paso">
+<h3>5. Resolución del Caso</h3>
+<p>Búsqueda de la mejor resolución para el cliente.</p>
 </div>
 
 </div>
@@ -427,6 +405,8 @@ grid-template-columns:1fr;
 
 <div>
 
+<h3>Información de Oficina</h3>
+
 <p><i class="fas fa-phone"></i> +51 963 694 971</p>
 
 <p><i class="fas fa-envelope"></i> evlabogados.sac@gmail.com</p>
@@ -434,6 +414,8 @@ grid-template-columns:1fr;
 <p><i class="fas fa-location-dot"></i> Jr. Pedro Puelles 507 - Huánuco</p>
 
 <br>
+
+<h3>Ubicación de la Oficina</h3>
 
 <iframe src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=embed"></iframe>
 
@@ -449,7 +431,7 @@ grid-template-columns:1fr;
 
 <textarea name="mensaje" placeholder="Escriba su consulta..." required></textarea>
 
-<button type="submit">Enviar Consulta</button>
+<button type="submit">Enviar Mensaje</button>
 
 </form>
 
@@ -466,36 +448,6 @@ grid-template-columns:1fr;
 <p>© 2026 Eduardo Verastegui Lazarte - Abogados & Asociados</p>
 
 </footer>
-
-<script>
-
-/* contador animado */
-
-const counters=document.querySelectorAll('.contador');
-
-counters.forEach(counter=>{
-
-const update=()=>{
-
-const target=+counter.getAttribute('data-target');
-const c=+counter.innerText;
-
-const inc=target/100;
-
-if(c<target){
-counter.innerText=Math.ceil(c+inc);
-setTimeout(update,20);
-}else{
-counter.innerText=target;
-}
-
-}
-
-update();
-
-});
-
-</script>
 
 </body>
 </html>

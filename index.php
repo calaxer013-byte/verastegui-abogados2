@@ -123,6 +123,27 @@ color:#d4af37;
 margin-bottom:10px;
 }
 
+/* ESTADISTICAS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.stat{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat h3{
+font-size:35px;
+color:#d4af37;
+}
+
 /* PROCESO */
 
 .proceso{
@@ -136,6 +157,37 @@ background:white;
 padding:20px;
 border-left:5px solid #d4af37;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CASOS */
+
+.casos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.caso{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* TESTIMONIOS */
+
+.testimonios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.testimonio{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-style:italic;
 }
 
 /* CONTACTO */
@@ -170,16 +222,12 @@ button:hover{
 background:#1b2f47;
 }
 
-/* MAPA */
-
 iframe{
 width:100%;
 height:300px;
 border:0;
 border-radius:10px;
 }
-
-/* FOOTER */
 
 footer{
 background:#0d1b2a;
@@ -188,8 +236,6 @@ text-align:center;
 padding:20px;
 margin-top:40px;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -205,71 +251,10 @@ align-items:center;
 border-radius:50%;
 font-size:28px;
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
-z-index:1000;
 }
-
-/* ===================== */
-/* RESPONSIVE */
-/* ===================== */
 
 @media(max-width:900px){
-
-.contacto{
-grid-template-columns:1fr;
-}
-
-}
-
-@media(max-width:768px){
-
-nav{
-flex-direction:column;
-align-items:flex-start;
-}
-
-nav div{
-margin-top:10px;
-}
-
-nav a{
-margin-left:0;
-margin-right:15px;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-section{
-padding:70px 6%;
-}
-
-}
-
-@media(max-width:480px){
-
-.hero{
-height:80vh;
-}
-
-.hero h1{
-font-size:26px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.whatsapp{
-width:55px;
-height:55px;
-font-size:24px;
-}
-
+.contacto{grid-template-columns:1fr;}
 }
 
 </style>
@@ -286,8 +271,9 @@ font-size:24px;
 
 <div>
 <a href="#inicio">Inicio</a>
+<a href="#sobre">Abogado</a>
 <a href="#servicios">Servicios</a>
-<a href="#proceso">Procesos</a>
+<a href="#casos">Casos</a>
 <a href="#contacto">Contacto</a>
 </div>
 
@@ -295,17 +281,60 @@ font-size:24px;
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="inicio">
 
 <div>
 
 <h1>Eduardo Verastegui Lazarte</h1>
-
 <p>Abogados & Asociados</p>
+<p>Defensa jurídica profesional, estratégica y personalizada</p>
 
-<p>Defensa jurídica profesional y estratégica</p>
+</div>
+
+</section>
+
+<!-- SOBRE EL ABOGADO -->
+
+<section id="sobre">
+
+<h2>Sobre el Abogado</h2>
+
+<p style="text-align:center; max-width:800px; margin:auto;">
+El Dr. Eduardo Verastegui Lazarte es abogado especializado en derecho penal,
+civil y laboral. Cuenta con amplia experiencia en litigación, defensa jurídica
+y asesoría legal estratégica, representando a clientes en procesos judiciales
+ante fiscalía, juzgados y tribunales.
+</p>
+
+</section>
+
+<!-- ESTADISTICAS -->
+
+<section>
+
+<h2>Nuestros Resultados</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>+300</h3>
+<p>Casos atendidos</p>
+</div>
+
+<div class="stat">
+<h3>92%</h3>
+<p>Resultados favorables</p>
+</div>
+
+<div class="stat">
+<h3>15+</h3>
+<p>Años de experiencia</p>
+</div>
+
+<div class="stat">
+<h3>+200</h3>
+<p>Clientes asesorados</p>
+</div>
 
 </div>
 
@@ -322,73 +351,76 @@ font-size:24px;
 <div class="card">
 <i class="fas fa-scale-balanced"></i>
 <h3>Derecho Civil</h3>
-<p>
-Asesoría en contratos, propiedad, sucesiones, indemnizaciones
-y conflictos civiles entre personas o empresas.
-</p>
+<p>Contratos, propiedad, sucesiones y conflictos civiles.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-gavel"></i>
 <h3>Derecho Penal</h3>
-<p>
-Defensa penal especializada en investigaciones fiscales
-y procesos judiciales.
-</p>
+<p>Defensa penal especializada en investigaciones fiscales.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-briefcase"></i>
 <h3>Derecho Laboral</h3>
-<p>
-Defensa de trabajadores y empresas en conflictos laborales
-y despidos injustificados.
-</p>
+<p>Defensa en conflictos laborales y despidos injustificados.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-building"></i>
 <h3>Asesoría Empresarial</h3>
-<p>
-Asesoría legal preventiva para empresas y cumplimiento normativo.
-</p>
+<p>Asesoría legal preventiva y cumplimiento normativo.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- PROCESO -->
+<!-- CASOS DE EXITO -->
 
-<section id="proceso">
+<section id="casos">
 
-<h2>Proceso de Atención de Casos</h2>
+<h2>Casos de Éxito</h2>
 
-<div class="proceso">
+<div class="casos">
 
-<div class="paso">
-<h3>1. Consulta Inicial</h3>
-<p>El cliente expone su caso y se realiza un análisis jurídico preliminar.</p>
+<div class="caso">
+<h3>Defensa Penal</h3>
+<p>Archivo definitivo de investigación fiscal por delito contra el patrimonio.</p>
 </div>
 
-<div class="paso">
-<h3>2. Evaluación Legal</h3>
-<p>Revisión de documentos, pruebas y antecedentes.</p>
+<div class="caso">
+<h3>Proceso Laboral</h3>
+<p>Reposición laboral obtenida judicialmente por despido arbitrario.</p>
 </div>
 
-<div class="paso">
-<h3>3. Estrategia Jurídica</h3>
-<p>Definición del plan legal y estrategia del caso.</p>
+<div class="caso">
+<h3>Proceso Civil</h3>
+<p>Resolución favorable en conflicto contractual empresarial.</p>
 </div>
 
-<div class="paso">
-<h3>4. Representación Legal</h3>
-<p>Defensa ante fiscalía, juzgados o conciliaciones.</p>
 </div>
 
-<div class="paso">
-<h3>5. Resolución del Caso</h3>
-<p>Búsqueda de la mejor resolución para el cliente.</p>
+</section>
+
+<!-- TESTIMONIOS -->
+
+<section>
+
+<h2>Testimonios de Clientes</h2>
+
+<div class="testimonios">
+
+<div class="testimonio">
+"Excelente defensa jurídica y asesoría profesional."
+</div>
+
+<div class="testimonio">
+"Gracias al estudio jurídico logramos resolver nuestro proceso."
+</div>
+
+<div class="testimonio">
+"Profesionalismo, compromiso y resultados favorables."
 </div>
 
 </div>
@@ -405,17 +437,11 @@ Asesoría legal preventiva para empresas y cumplimiento normativo.
 
 <div>
 
-<h3>Información de Oficina</h3>
-
 <p><i class="fas fa-phone"></i> +51 963 694 971</p>
-
 <p><i class="fas fa-envelope"></i> evlabogados.sac@gmail.com</p>
-
 <p><i class="fas fa-location-dot"></i> Jr. Pedro Puelles 507 - Huánuco</p>
 
 <br>
-
-<h3>Ubicación de la Oficina</h3>
 
 <iframe src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=embed"></iframe>
 

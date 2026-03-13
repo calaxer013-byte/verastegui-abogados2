@@ -40,6 +40,7 @@ position:fixed;
 width:100%;
 top:0;
 z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
 }
 
 nav{
@@ -51,6 +52,7 @@ flex-wrap:wrap;
 
 nav h2{
 color:#d4af37;
+font-weight:600;
 }
 
 nav a{
@@ -58,6 +60,11 @@ color:white;
 margin-left:20px;
 text-decoration:none;
 font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#d4af37;
 }
 
 /* HERO */
@@ -77,12 +84,29 @@ padding:20px;
 }
 
 .hero h1{
-font-size:45px;
+font-size:46px;
 margin-bottom:10px;
 }
 
 .hero p{
 font-size:20px;
+opacity:.9;
+}
+
+/* ESTADISTICAS */
+
+.stats{
+background:#0d1b2a;
+color:white;
+padding:60px 10%;
+display:flex;
+justify-content:space-around;
+text-align:center;
+}
+
+.stats h3{
+font-size:36px;
+color:#d4af37;
 }
 
 /* SECCIONES */
@@ -114,13 +138,13 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .card i{
-font-size:30px;
+font-size:32px;
 color:#d4af37;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 /* PROCESO */
@@ -133,9 +157,41 @@ gap:30px;
 
 .paso{
 background:white;
-padding:20px;
+padding:22px;
 border-left:5px solid #d4af37;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CASOS */
+
+.casos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.caso{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-top:4px solid #d4af37;
+}
+
+/* TESTIMONIOS */
+
+.testimonios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.testimonio{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-style:italic;
 }
 
 /* CONTACTO */
@@ -208,16 +264,12 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 z-index:1000;
 }
 
-/* ===================== */
 /* RESPONSIVE */
-/* ===================== */
 
 @media(max-width:900px){
-
 .contacto{
 grid-template-columns:1fr;
 }
-
 }
 
 @media(max-width:768px){
@@ -250,28 +302,6 @@ padding:70px 6%;
 
 }
 
-@media(max-width:480px){
-
-.hero{
-height:80vh;
-}
-
-.hero h1{
-font-size:26px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.whatsapp{
-width:55px;
-height:55px;
-font-size:24px;
-}
-
-}
-
 </style>
 
 </head>
@@ -287,7 +317,7 @@ font-size:24px;
 <div>
 <a href="#inicio">Inicio</a>
 <a href="#servicios">Servicios</a>
-<a href="#proceso">Procesos</a>
+<a href="#casos">Casos</a>
 <a href="#contacto">Contacto</a>
 </div>
 
@@ -305,8 +335,29 @@ font-size:24px;
 
 <p>Abogados & Asociados</p>
 
-<p>Defensa jurídica profesional y estratégica</p>
+<p>Defensa jurídica estratégica y representación legal especializada</p>
 
+</div>
+
+</section>
+
+<!-- ESTADISTICAS -->
+
+<section class="stats">
+
+<div>
+<h3>+250</h3>
+<p>Casos Atendidos</p>
+</div>
+
+<div>
+<h3>95%</h3>
+<p>Resultados Favorables</p>
+</div>
+
+<div>
+<h3>15+</h3>
+<p>Años de Experiencia</p>
 </div>
 
 </section>
@@ -315,80 +366,79 @@ font-size:24px;
 
 <section id="servicios">
 
-<h2>Servicios Jurídicos</h2>
+<h2>Áreas de Práctica Jurídica</h2>
 
 <div class="servicios">
 
 <div class="card">
-<i class="fas fa-scale-balanced"></i>
+<i class="fa-solid fa-scale-balanced"></i>
 <h3>Derecho Civil</h3>
-<p>
-Asesoría en contratos, propiedad, sucesiones, indemnizaciones
-y conflictos civiles entre personas o empresas.
-</p>
+<p>Asesoría en contratos, sucesiones, responsabilidad civil, propiedad y conflictos patrimoniales.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-gavel"></i>
+<i class="fa-solid fa-gavel"></i>
 <h3>Derecho Penal</h3>
-<p>
-Defensa penal especializada en investigaciones fiscales
-y procesos judiciales.
-</p>
+<p>Defensa penal estratégica en investigaciones fiscales y procesos judiciales.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-briefcase"></i>
+<i class="fa-solid fa-user-tie"></i>
 <h3>Derecho Laboral</h3>
-<p>
-Defensa de trabajadores y empresas en conflictos laborales
-y despidos injustificados.
-</p>
+<p>Defensa de trabajadores y empresas en conflictos laborales y despidos.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-building"></i>
+<i class="fa-solid fa-building"></i>
 <h3>Asesoría Empresarial</h3>
-<p>
-Asesoría legal preventiva para empresas y cumplimiento normativo.
-</p>
+<p>Consultoría jurídica preventiva y cumplimiento normativo empresarial.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- PROCESO -->
+<!-- CASOS -->
 
-<section id="proceso">
+<section id="casos">
 
-<h2>Proceso de Atención de Casos</h2>
+<h2>Casos de Éxito</h2>
 
-<div class="proceso">
+<div class="casos">
 
-<div class="paso">
-<h3>1. Consulta Inicial</h3>
-<p>El cliente expone su caso y se realiza un análisis jurídico preliminar.</p>
+<div class="caso">
+<h3>Proceso Laboral Ganado</h3>
+<p>Obtención de indemnización completa por despido arbitrario.</p>
 </div>
 
-<div class="paso">
-<h3>2. Evaluación Legal</h3>
-<p>Revisión de documentos, pruebas y antecedentes.</p>
+<div class="caso">
+<h3>Archivo de Investigación Penal</h3>
+<p>Se logró el archivo fiscal por insuficiencia probatoria.</p>
 </div>
 
-<div class="paso">
-<h3>3. Estrategia Jurídica</h3>
-<p>Definición del plan legal y estrategia del caso.</p>
+<div class="caso">
+<h3>Conflicto Civil Resuelto</h3>
+<p>Resolución favorable en disputa de propiedad inmobiliaria.</p>
 </div>
 
-<div class="paso">
-<h3>4. Representación Legal</h3>
-<p>Defensa ante fiscalía, juzgados o conciliaciones.</p>
 </div>
 
-<div class="paso">
-<h3>5. Resolución del Caso</h3>
-<p>Búsqueda de la mejor resolución para el cliente.</p>
+</section>
+
+<!-- TESTIMONIOS -->
+
+<section>
+
+<h2>Testimonios de Clientes</h2>
+
+<div class="testimonios">
+
+<div class="testimonio">
+“Excelente asesoría jurídica y acompañamiento durante todo el proceso.”
+</div>
+
+<div class="testimonio">
+“Profesionalismo y compromiso en la defensa de mi caso.”
 </div>
 
 </div>
@@ -415,7 +465,7 @@ Asesoría legal preventiva para empresas y cumplimiento normativo.
 
 <br>
 
-<h3>Ubicación de la Oficina</h3>
+<h3>Ubicación</h3>
 
 <iframe src="https://www.google.com/maps?q=Jr.%20Pedro%20Puelles%20507%20Huanuco&output=embed"></iframe>
 

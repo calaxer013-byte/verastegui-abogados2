@@ -24,7 +24,15 @@ if(isset($_GET['success'])){
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
 body{
 background:#f4f6f9;
@@ -58,7 +66,7 @@ animation:spin 1s linear infinite;
 100%{transform:rotate(360deg)}
 }
 
-/* TOP BAR */
+/* TOPBAR */
 
 .topbar{
 background:#08121c;
@@ -72,7 +80,7 @@ justify-content:space-between;
 /* HEADER */
 
 header{
-background:#0d1b2a;
+background:#0a192f;
 color:white;
 padding:15px 40px;
 position:fixed;
@@ -87,12 +95,25 @@ justify-content:space-between;
 align-items:center;
 }
 
-nav h2{color:#d4af37;}
+nav h2{
+color:#d4af37;
+}
 
-nav a{
+.menu{
+display:flex;
+}
+
+.menu a{
 color:white;
 margin-left:20px;
 text-decoration:none;
+font-size:15px;
+}
+
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
 }
 
 /* HERO */
@@ -102,6 +123,7 @@ height:90vh;
 background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
 background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -110,11 +132,28 @@ color:white;
 padding:20px;
 }
 
-.hero h1{font-size:45px;margin-bottom:10px;}
-.hero p{font-size:20px;}
+.hero h1{
+font-size:45px;
+margin-bottom:10px;
+}
 
-section{padding:80px 10%;}
-h2{text-align:center;margin-bottom:40px;color:#0d1b2a;}
+.hero p{
+font-size:20px;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#0a192f;
+}
+
+/* SERVICIOS */
 
 .servicios{
 display:grid;
@@ -130,8 +169,17 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.card:hover{transform:translateY(-5px);}
-.card i{font-size:30px;color:#d4af37;margin-bottom:10px;}
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:30px;
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* STATS */
 
 .stats{
 display:grid;
@@ -152,6 +200,8 @@ font-size:35px;
 color:#d4af37;
 }
 
+/* PROCESO */
+
 .proceso{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -164,6 +214,8 @@ padding:25px;
 border-left:5px solid #d4af37;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* TESTIMONIOS */
 
 .testimonios{
 display:grid;
@@ -178,6 +230,8 @@ border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 font-style:italic;
 }
+
+/* CONTACTO */
 
 .contacto{
 display:grid;
@@ -194,7 +248,7 @@ border-radius:6px;
 }
 
 button{
-background:#0d1b2a;
+background:#0a192f;
 color:white;
 border:none;
 padding:12px;
@@ -203,7 +257,9 @@ border-radius:6px;
 cursor:pointer;
 }
 
-button:hover{background:#1b2f47;}
+button:hover{
+background:#1b2f47;
+}
 
 iframe{
 width:100%;
@@ -211,6 +267,8 @@ height:300px;
 border:0;
 border-radius:10px;
 }
+
+/* ALERTA */
 
 .alert{
 background:#28a745;
@@ -220,13 +278,17 @@ text-align:center;
 margin-top:100px;
 }
 
+/* FOOTER */
+
 footer{
-background:#0d1b2a;
+background:#0a192f;
 color:white;
 text-align:center;
 padding:20px;
 margin-top:40px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -244,8 +306,85 @@ font-size:28px;
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
+/* RESPONSIVE */
+
 @media(max-width:900px){
-.contacto{grid-template-columns:1fr;}
+
+.topbar{
+display:none;
+}
+
+header{
+top:0;
+padding:15px 20px;
+}
+
+.menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#0a192f;
+flex-direction:column;
+align-items:center;
+display:none;
+}
+
+.menu a{
+padding:15px;
+width:100%;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.menu-toggle{
+display:block;
+color:white;
+}
+
+.hero{
+height:auto;
+padding:120px 20px 80px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+section{
+padding:60px 25px;
+}
+
+.contacto{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+.proceso{
+grid-template-columns:1fr;
+}
+
+.testimonios{
+grid-template-columns:1fr;
+}
+
+iframe{
+height:250px;
+}
+
+.whatsapp{
+width:55px;
+height:55px;
+font-size:24px;
+}
+
 }
 
 </style>
@@ -270,9 +409,14 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 <header>
 
 <nav>
+
 <h2>EVL Abogados</h2>
 
-<div>
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<div class="menu">
 <a href="#inicio">Inicio</a>
 <a href="#sobre">Abogado</a>
 <a href="#especialidades">Especialidades</a>
@@ -395,28 +539,6 @@ los derechos e intereses de sus patrocinados.
 
 </section>
 
-<section>
-
-<h2>Testimonios de Clientes</h2>
-
-<div class="testimonios">
-
-<div class="testimonio">
-"Excelente defensa jurídica y asesoría profesional durante todo el proceso."
-</div>
-
-<div class="testimonio">
-"Profesionalismo, compromiso y resultados favorables."
-</div>
-
-<div class="testimonio">
-"Gracias a su estrategia legal logramos resolver nuestro caso."
-</div>
-
-</div>
-
-</section>
-
 <section id="contacto">
 
 <h2>Contacto</h2>
@@ -466,6 +588,15 @@ window.addEventListener("load",()=>{
 document.getElementById("loader").style.display="none";
 });
 
+/* MENU MOBILE */
+
+const toggle=document.querySelector(".menu-toggle");
+const menu=document.querySelector(".menu");
+
+toggle.addEventListener("click",()=>{
+menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
+
 /* CONTADORES */
 
 const counters=document.querySelectorAll(".contador");
@@ -494,24 +625,6 @@ counter.innerText=target+"+";
 
 update();
 
-});
-
-/* ANIMACION SCROLL */
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.style.opacity=1;
-entry.target.style.transform="translateY(0)";
-}
-});
-});
-
-document.querySelectorAll("section,.card,.stat,.paso,.testimonio").forEach(el=>{
-el.style.opacity=0;
-el.style.transform="translateY(40px)";
-el.style.transition="all .8s ease";
-observer.observe(el);
 });
 
 </script>

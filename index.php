@@ -582,13 +582,9 @@ los derechos e intereses de sus patrocinados.
 
 <script>
 
-/* LOADER */
-
 window.addEventListener("load",()=>{
 document.getElementById("loader").style.display="none";
 });
-
-/* MENU MOBILE */
 
 const toggle=document.querySelector(".menu-toggle");
 const menu=document.querySelector(".menu");
@@ -596,8 +592,6 @@ const menu=document.querySelector(".menu");
 toggle.addEventListener("click",()=>{
 menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 });
-
-/* CONTADORES */
 
 const counters=document.querySelectorAll(".contador");
 
@@ -625,6 +619,22 @@ counter.innerText=target+"+";
 
 update();
 
+});
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity=1;
+entry.target.style.transform="translateY(0)";
+}
+});
+});
+
+document.querySelectorAll("section,.card,.stat,.paso,.testimonio").forEach(el=>{
+el.style.opacity=0;
+el.style.transform="translateY(40px)";
+el.style.transition="all .8s ease";
+observer.observe(el);
 });
 
 </script>
